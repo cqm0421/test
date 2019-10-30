@@ -1,19 +1,25 @@
 #include<stdio.h> 
 int main()
 {
-	int a,b=0,i;
-	printf("请输入一个2-10000之间的数字");
-	scanf("%d",&a);
-	for(i=1;i<=a-1;i++)
+	int k,p,i;
+	printf("请输入一个2-10000的数字");
+	scanf("%d",&k) ;
+	if(k>=2&&k<=10000)
 	{
-	
-		if(a%i==0) 
-		printf("%d",i);
-	
-		  
-	    else continue;
-	    
-
+		for(i=2;i<=k;i++)
+		{
+			while(k%i==0)
+			{
+				p=k/i;
+				k=p;
+				printf("%d ",i);
+				
+			}
+		}
+	}
+	else
+	{printf("输入错误"); 
 	}
 	return 0;
 }
+
